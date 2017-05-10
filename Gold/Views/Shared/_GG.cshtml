@@ -1,0 +1,22 @@
+﻿
+@model List<Gold.Models.GoldViewModels>
+
+@{ int i = 1;}
+<tr>
+    <th>#</th>
+    <th>類別</th>
+    <th>日期</th>
+    <th>金額</th>
+    <th>備註</th>
+</tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@(i++)</td>
+        <td>@item.Sort</td>
+        <td>@item.Date</td>
+        <td>@item.Coin</td>
+        <td>@item.Remark</td>
+    </tr>
+}
